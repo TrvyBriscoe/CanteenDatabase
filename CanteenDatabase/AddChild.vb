@@ -12,6 +12,7 @@
             Privilege = "Standard"
             sql.addUserChild(username, TextBox1.Text, TextBox2.Text)
             MsgBox("Your child has been successfully added")
+            MainAccount.PopulateCombo()
             Me.Hide()
             MainAccount.Show()
         End If
