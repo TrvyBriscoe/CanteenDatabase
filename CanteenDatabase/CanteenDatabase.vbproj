@@ -46,8 +46,13 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -72,17 +77,78 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="AddNewUser.Designer.vb">
+      <DependentUpon>AddNewUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewUser.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="AdminForm.Designer.vb">
+      <DependentUpon>AdminForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Breakfast.Designer.vb">
+      <DependentUpon>Breakfast.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Breakfast.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CanteenMenuChoice.Designer.vb">
+      <DependentUpon>CanteenMenuChoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CanteenMenuChoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashout.Designer.vb">
+      <DependentUpon>Cashout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cashout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFunds.Designer.vb">
+      <DependentUpon>AddFunds.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddFunds.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPW.Designer.vb">
+      <DependentUpon>ForgotPW.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPW.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPass2.Designer.vb">
+      <DependentUpon>FPass2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FPass2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPage.Designer.vb">
+      <DependentUpon>LoginPage.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lunch.Designer.vb">
+      <DependentUpon>Lunch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Lunch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainAccount.Designer.vb">
+      <DependentUpon>MainAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainAccount.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -94,16 +160,62 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="NewPassword.Designer.vb">
+      <DependentUpon>NewPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLControl.vb" />
+    <Compile Include="userInstance.vb" />
+    <Compile Include="ValidCredentials.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddFunds.resx">
+      <DependentUpon>AddFunds.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewUser.resx">
+      <DependentUpon>AddNewUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Breakfast.resx">
+      <DependentUpon>Breakfast.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CanteenMenuChoice.resx">
+      <DependentUpon>CanteenMenuChoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashout.resx">
+      <DependentUpon>Cashout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPW.resx">
+      <DependentUpon>ForgotPW.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPass2.resx">
+      <DependentUpon>FPass2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lunch.resx">
+      <DependentUpon>Lunch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainAccount.resx">
+      <DependentUpon>MainAccount.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewPassword.resx">
+      <DependentUpon>NewPassword.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
