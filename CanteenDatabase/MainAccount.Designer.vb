@@ -45,6 +45,7 @@ Partial Class MainAccount
         Me.Label_BreakIntro = New System.Windows.Forms.Label()
         Me.Label_ChildIntro = New System.Windows.Forms.Label()
         Me.Tab_Settings = New System.Windows.Forms.TabPage()
+        Me.Button_AddChild = New System.Windows.Forms.Button()
         Me.Panel_Allowance = New System.Windows.Forms.Panel()
         Me.Button_RemoveAllowance = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -288,6 +289,7 @@ Partial Class MainAccount
         '
         'Tab_Settings
         '
+        Me.Tab_Settings.Controls.Add(Me.Button_AddChild)
         Me.Tab_Settings.Controls.Add(Me.Panel_Allowance)
         Me.Tab_Settings.Controls.Add(Me.Button_ChangeP)
         Me.Tab_Settings.Location = New System.Drawing.Point(4, 25)
@@ -298,6 +300,15 @@ Partial Class MainAccount
         Me.Tab_Settings.TabIndex = 1
         Me.Tab_Settings.Text = "Settings"
         Me.Tab_Settings.UseVisualStyleBackColor = True
+        '
+        'Button_AddChild
+        '
+        Me.Button_AddChild.Location = New System.Drawing.Point(24, 121)
+        Me.Button_AddChild.Name = "Button_AddChild"
+        Me.Button_AddChild.Size = New System.Drawing.Size(88, 51)
+        Me.Button_AddChild.TabIndex = 1
+        Me.Button_AddChild.Text = "Add New Child"
+        Me.Button_AddChild.UseVisualStyleBackColor = True
         '
         'Panel_Allowance
         '
@@ -362,7 +373,7 @@ Partial Class MainAccount
         '
         'Button_ChangeP
         '
-        Me.Button_ChangeP.Location = New System.Drawing.Point(24, 107)
+        Me.Button_ChangeP.Location = New System.Drawing.Point(24, 45)
         Me.Button_ChangeP.Margin = New System.Windows.Forms.Padding(4)
         Me.Button_ChangeP.Name = "Button_ChangeP"
         Me.Button_ChangeP.Size = New System.Drawing.Size(88, 52)
@@ -467,4 +478,5 @@ Partial Class MainAccount
     Friend WithEvents Label_DisplayHP As Label
     Friend WithEvents ComboBox_Child As ComboBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents Button_AddChild As Button
 End Class

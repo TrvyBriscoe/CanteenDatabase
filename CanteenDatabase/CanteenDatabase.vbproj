@@ -77,6 +77,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddChild.Designer.vb">
+      <DependentUpon>AddChild.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddChild.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AddNewUser.Designer.vb">
       <DependentUpon>AddNewUser.vb</DependentUpon>
     </Compile>
@@ -171,6 +177,9 @@
     <Compile Include="ValidCredentials.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddChild.resx">
+      <DependentUpon>AddChild.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddFunds.resx">
       <DependentUpon>AddFunds.vb</DependentUpon>
     </EmbeddedResource>

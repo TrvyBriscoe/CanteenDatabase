@@ -117,4 +117,8 @@ Public Class MainAccount
         Label_Lunch.Text = ""
     End Sub
 
+    Private Sub Button_AddChild_Click(sender As Object, e As EventArgs) Handles Button_AddChild.Click
+        AddChild.Show()
+        Me.Hide()
+    End Sub
 End Class
